@@ -1,0 +1,12 @@
+.cardReel{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    height: 210px;
+    white-space: nowrap;
+    overflow-x: auto;
+    position: relative;
+    scrollbar-width:thin;
+    scrollbar-color: transparent transparent;
+}

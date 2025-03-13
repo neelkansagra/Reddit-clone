@@ -1,0 +1,72 @@
+.rightSide{
+    background-color: #0E1113;
+    margin-left: -1px;
+   
+}
+.rightContent{
+    /* flex: 4; */
+    max-width: calc(100vw - 272px);
+    width: 1120px;
+    grid-column-start: 2;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    order: 2;
+}
+
+.leftRightBtn{
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.leftBtn{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    border: none;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.rightBtn{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    right: 280px;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    border: none;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+
+}
+
+.rightMain{
+    gap:1rem;
+    width: 100%;
+    display: flex;
+    padding-bottom: 2rem;
+}
+.MainContent{
+    scroll-margin-top: 56px;
+    max-width: 756px;
+    width: 100%;
+}
+
+.endLine2{
+    border-color: #FFFFFF19;
+    width: 100%;
+}

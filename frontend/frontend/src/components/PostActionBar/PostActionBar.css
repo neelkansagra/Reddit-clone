@@ -1,0 +1,88 @@
+.PostBtnBar{
+    overflow: hidden;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    display: flex;
+    cursor: pointer;
+}
+.UpvoteMain{
+    line-height: 1rem;
+    position: relative;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0;
+    overflow: visible;
+    align-items: center;
+    cursor: auto;
+    display: inline-flex;
+    background-color: #2A3236;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    text-overflow: ellipsis;
+    outline-offset: 0;
+    border-radius: 999px;
+    border: 0 solid transparent;
+    text-decoration: none;
+    white-space: nowrap;
+
+}
+.UpvoteBtn{
+    height: 2rem;
+    padding: 0;
+    border-width: 0rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    aspect-ratio: 1/1;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: transparent;
+    color: white;
+    width: 1rem;
+
+}
+.CmtBtn{
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #2A3236;
+    height: 2rem;
+    border-radius: 999px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+
+}
+.AwardsBtn{
+    background-color: #2A3236;
+    font:normal 600 0.75rem/1rem var(--font-sans);
+    height: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 0;
+    border-radius: 999px;
+    border-width: 0.125rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    aspect-ratio: 1/1;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: white;
+    position: relative;
+}
+.ShareBtn{
+    height: 2rem;
+    background-color: #2A3236;
+    border: none;
+    border-radius: 999px;
+    color: white;
+    font-weight: 600;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}

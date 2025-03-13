@@ -1,0 +1,20 @@
+.PostMain{
+    width: 100%;
+    margin: 0;
+}
+.Post:hover{
+    background-color: #181C1F;
+}
+.Post{
+    border-radius: 16px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #0E1113;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    position: relative;
+
+}

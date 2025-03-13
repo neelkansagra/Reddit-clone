@@ -1,0 +1,39 @@
+.PostTitle{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+
+}
+.PostText{
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    color: #B7CAD4;
+    
+    cursor: pointer;
+
+}
+.PText{
+    color: #B7CAD4;
+    text-decoration-line: none;
+    pointer-events: none;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-overflow: ellipsis;
+}
+p{
+    all: revert;
+    display: inline;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-block: unset;
+    margin-inline: unset;
+    padding: 0;
+}

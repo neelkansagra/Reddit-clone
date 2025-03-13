@@ -1,0 +1,36 @@
+.getApp{
+    box-sizing: border-box;
+    padding-right: 0.875rem;
+    padding-left: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 999px;
+    border: 0.0625rem solid transparent;
+    height: 2.5rem;
+    text-align: center;
+    outline-offset: 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #2A3236;
+    color: white;
+    font: normal 600 0.875rem/1.25rem 'Segoe UI','Helvetica Neue',Arial,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
+    line-height: 2.275rem;
+}
+.getApp:hover{
+    background-color: #333D42;
+    cursor: pointer;
+}
+
+.QRSVG{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    margin-right: 0.5rem;
+}
+.getAppSpan{
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}

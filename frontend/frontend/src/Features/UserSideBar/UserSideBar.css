@@ -1,0 +1,205 @@
+.ImgPlaceholder{
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        width: 100%;
+        height: 97px;
+        position: relative;
+
+}
+.BannerImgClass{
+    background-image: url(./../../assests/Icons/UserBanner.webp);
+    width:100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+
+}
+.UserInfo{
+    padding: 1rem;
+}
+.UsernamePlaceholder{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+}
+.UserNameClass{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    color: #EEF1F3;
+}
+.userMoreOptionsBtn{
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 999px;
+    font: normal 600;
+    height: 2rem;
+    width: 34px;
+    text-align: center;
+    background-color: #2A3236;
+    border-width: 0;
+    box-sizing: border-box;
+}
+.userMoreOptionsBtn:hover{
+    background-color: #333D42;
+    cursor: pointer;
+}
+.userMoreOprtionsSub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #FFFFFF;
+
+}
+.FollowBtnPlaceholder{
+    margin-top: .75rem;
+
+}
+.InsideFollowBtn{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+
+}
+.FollowBtn{
+
+}
+.FollowBtnLayout{
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    background-color: #115BCA;
+    height: 2rem;
+    border-radius: 999px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-width: 0.0625rem;
+    border-style: none;
+
+}
+.FollowBtnLayout:hover{
+    background-color: #1870F4;
+}
+.FollowBtnSpan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.FollowBtnIcon{
+    display: flex;
+    margin-right: .5rem;
+
+}
+.FollowBtnText{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 600;
+}
+.StartChatBtn{
+
+}
+.StartChatLayout{
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    background-color: #2A3236;
+    height: 2rem;
+    border-radius: 999px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-width: 0.0625rem;
+    border-style: none;
+
+}
+.StartChatLayout:hover{
+    background-color: #333D42;
+}
+.StartChatBtnSpan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.StartChatIcon{
+    margin-right: .5rem;
+
+}
+.StartChatText{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 600;
+}
+.DescriptionPlaceholder{
+    margin-top: 1rem;
+
+}
+.DescText{
+    color:#8BA2AD;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+.StatisticsPlaceholder{
+    column-gap: .75rem;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    
+}
+.postKarmaPlc{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.commentKarmaPlc{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.cakeDayPlc{
+    display: flex;
+    flex-direction: column;
+}
+.statsText{
+    color: #EEF1F3;
+    font-weight: 600;
+    line-height: 1.25rem;
+    font-size: .875rem;
+    white-space: nowrap;
+    margin: 0;
+
+}
+.statsDesc{
+    color: #8BA2AD;
+    line-height: 1rem;
+    font-size: .75rem;
+    white-space: nowrap;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+.endLine2{
+    border-color: #FFFFFF19;
+    border-style: solid;
+    border-bottom-width: 0.0625rem;
+    margin: 0;
+}

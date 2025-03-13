@@ -1,0 +1,25 @@
+.banner{
+    margin: 0 0 0 0;
+    background-color: #0E1113;
+    border-color: #ffffff19;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 0.0625rem;
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    
+}
+.nav{
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;    
+
+}

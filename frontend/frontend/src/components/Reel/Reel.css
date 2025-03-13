@@ -1,0 +1,93 @@
+.Cards{
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: inline-flex;
+    margin-right: 1rem;
+    list-style-type: none;
+    scroll-snap-align: start;
+    height: 100%;
+    cursor: pointer;
+}
+
+.cardLink{
+    width: 280px;
+    height: 100%;
+    display: block;
+    position: sticky;
+    
+}
+.cardImg{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    max-width: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+    
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    justify-content: flex-end;
+    height: 185px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    
+    position: sticky;
+    margin-top: -193px;
+    background : linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 60%, rgba(0, 0, 0, 0.6) 100%);
+
+}
+.cardTitle{
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+}
+.cardDesc{
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+
+
+}
+.cardLogo{
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+.cardSubredditIcon{
+    line-height: 1rem;
+    width: 24px;
+    height: 24px;
+
+}
+.cardSubName{
+    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+    font-weight: 700;
+}
+.andMore{
+    color: rgb(139 162 173);
+
+}

@@ -1,0 +1,44 @@
+.SubredditBar{
+    scrollbar-color: #2A3236 transparent;
+    scrollbar-width: thin;
+    display: block;
+    background-color: #000000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 57px);
+    top: 60px;
+    position: sticky;
+    min-width: 316px;
+    width: 316px;
+    height: fit-content;
+    border-radius: 8px;
+    margin-top: 1rem;
+    
+}
+.SubredditDiv{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.313rem;
+    padding-right: 1.313rem;
+    color: #8BA2AD;
+}
+.PopComm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.PopText{
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font: normal;
+}
+.SubbList{
+    list-style-type: none;
+    margin-top: 0.25rem;
+}
