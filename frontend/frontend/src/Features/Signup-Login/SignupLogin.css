@@ -116,7 +116,6 @@
     padding-bottom: 0.5rem;
 
 
-
 }
 .emailLabel{
     color: #8BA2AD;
@@ -130,6 +129,7 @@
     outline: 0px;
 
 }
+
 .PswdPlaceholder{
     margin-left: 80px;
     margin-right: 80px;
@@ -162,8 +162,9 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: #B7CAD4;
+}
+.signupAnchor a:hover{
     cursor: pointer;
-
 }
 .loginBtn{
     padding-left: 80px;
@@ -185,11 +186,19 @@
     color: white;
     font: normal 600;
 }
+.orangeLogin:disabled{
+    background-color: #FFFFFF0C;
+    color: #FFFFFF3F;
+}
 .signupBtn{
     
         padding-left: 80px;
         padding-right: 80px;
         padding-bottom: 24px;
         padding-top: 312px;
-    
+}
+.error{
+    color: #FF4F40;
+    line-height: 1rem;
+    font-size: 0.75rem;
 }

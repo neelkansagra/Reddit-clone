@@ -4,7 +4,7 @@ import LeftScrollBar from '../../Features/LeftScrollBar/LeftScrollBar';
 import MainContent from '../../Features/MainContentPage/MainContentPage';
 import SubredditPage from '../../Features/SubredditPage/SubredditPage';
 import UserPage from '../../Features/UserPage/UserPage';
-import LoginPage from '../../Features/LoginPage/LoginPage';
+import SignupLogin from '../../Features/Signup-Login/SignupLogin';
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -19,7 +19,6 @@ const HomeFirst = () =>{
             if(!loginClicked){
                 setLoginClicked(true);
                 document.body.style.overflow = "hidden";
-                //console.log(event);
             }
     }
     useEffect(() => {
@@ -75,7 +74,7 @@ const HomeFirst = () =>{
                     <RouterProvider router={router}/>
                 </div>
             
-            {loginClicked && <LoginPage ref = {loginele}/>}
+            {loginClicked && <SignupLogin ref = {loginele}/>}
             
         </div>
     );
