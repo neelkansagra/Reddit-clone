@@ -22,7 +22,7 @@ const Continue = () =>{
     const [passwordError, setPasswordState] = useState(passwordEnum.default);
     const usernameRef = useRef("");
     const passwordRef = useRef("");
-    const [disabled, setDisabled] = useState(true);
+    let disabled = true;
 
     let handlePasswordChange = () => {
         if(passwordRef.current.value.length < 8){
@@ -37,7 +37,7 @@ const Continue = () =>{
     }
 
     let handleEmailChange = () => {
-        if(usernameRef.current.value.match("/[a-zA-Z0-9_-]+/")){
+        if(usernameRef.current.value.match(/[^a-zA-Z0-9_\-]+/)){
             setUsernameState(usernameEnum.invalid);
         }
         else if(usernameRef.current.value === ""){
@@ -72,15 +72,12 @@ const Continue = () =>{
         }
     }
 
-    useEffect(() => {
-        if((usernameError === usernameEnum.approved || usernameError === usernameEnum.default) && passwordError === passwordEnum.default){
-            setDisabled(false);
-        }
-        else{
-            setDisabled(true);
-        }
+    if((usernameError === usernameEnum.approved || usernameError === usernameEnum.default) && passwordError === passwordEnum.default){
+        disabled = false;
     }
-    ,[usernameError, passwordError]);
+    else{
+        disabled = true;
+    }
 
     let postHandler = () => {
         console.log(email.current.value);

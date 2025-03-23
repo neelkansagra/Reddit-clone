@@ -1,7 +1,7 @@
 import string
 import random
 from app import app
-from app.models import User, Post, Subreddit, Comment, UserSubs
+from app.Models import User, Post, Subreddit, Comment, UserSubs
 
 def create_users():
   with app.app_context():
