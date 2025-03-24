@@ -79,7 +79,7 @@ const LoginPage = forwardRef((props, ref) =>{
                 <div>New to Reddit? <a style={{textDecorationLine: "none" ,fontSize: "0.875rem", lineHeight: "1.25rem", display: "inline-block", color: "#648EFC"}} onClick={() => setStatus(Page.SIGNUP)} > Sign Up</a></div>
             </div>
             <div className='loginBtn'>
-                <button className='orangeLogin' onClick={handleSubmit}>
+                <button className='orangeLogin' disabled= {errorEmail.errorState || errorPassword.errorState} onClick={handleSubmit}>
                     Log In
                 </button>
             </div>

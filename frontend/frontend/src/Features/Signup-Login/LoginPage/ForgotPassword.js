@@ -1,9 +1,24 @@
 import "./../SignupLogin.css"
-import React, {useContext, forwardRef} from "react";
-import {StatusContext, Page} from "./../PageContext";
+import React, {useContext, forwardRef, useState, useRef} from "react";
+import {StatusContext, Page, emailContext} from "./../PageContext";
 
 const ForgotPassword = forwardRef((props, ref) => {
     const {setStatus} = useContext(StatusContext);
+    let [errorEmail, setErrorEmail] = useState({errorState: false, msg: ""});
+    let username = useRef(""); 
+    let {email, setEmailValue} = useContext(emailContext);
+
+    let handleEmailBlur = () => {
+        if(username.current.value === ""){
+            setErrorEmail({errorState: true, msg: "Please fill in this field."});
+        }
+        else{
+            setErrorEmail({errorState: false, msg: ""});
+        }
+    }
+
+
+
     return (
         <div>
             <div className='loginCross' style={{ justifyContent: "space-between" }}>
@@ -32,14 +47,15 @@ const ForgotPassword = forwardRef((props, ref) => {
                 <span className='emailLabel'>
                     Email or username*
                 </span>
-                <input className="emailInput" type='text' name="username" autoComplete='username'></input>
+                <input className="emailInput" type='text' name="username" autoComplete='username' ref={username} onBlur={handleEmailBlur} defaultValue={email.current.value}></input>
+                {errorEmail.errorState && <span id="helper-text" className="error">{errorEmail.msg}</span>}
             </div>
             <div className='frgtPswdwText'>
                 <a style={{textDecorationLine: "none" ,fontSize: "0.875rem", lineHeight: "1.25rem", display: "inline-block", color: "#648EFC"}}>Need Help?</a>
             </div>
             <div className='loginBtn'>
-                <button className='orangeLogin'>
-                    Log In
+                <button className='orangeLogin' disabled={errorEmail.errorState} onClick={() => {setEmailValue(username.current); setStatus(Page.CHECKEMAIL);}}>
+                    Reset Password
                 </button>
             </div>
         </div>

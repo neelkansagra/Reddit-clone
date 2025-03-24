@@ -4,7 +4,8 @@ export const Page = {
     LOGIN: 'login',
     FORGOTPASSWORD: 'forgotpassword',
     SIGNUP: 'signup',
-    CONTINUE: 'continue'
+    CONTINUE: 'continue',
+    CHECKEMAIL: 'checkemail'
 };
 
 export const StatusContext = createContext();

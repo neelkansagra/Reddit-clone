@@ -4,6 +4,7 @@ import LoginPage from './LoginPage/LoginPage';
 import Signup from './SignupPage/Signup';
 import Continue from './SignupPage/Continue';
 import ForgotPassword from './LoginPage/ForgotPassword';
+import CheckEmail from './LoginPage/CheckEmail';
 import { StatusContext, Page, emailContext } from './PageContext';
 
 
@@ -22,6 +23,8 @@ const SignupLogin = forwardRef((props, ref) =>{
             return <ForgotPassword ref = {ref} />;
           case Page.SIGNUP:
             return <Signup ref = {ref} />;
+          case Page.CHECKEMAIL:
+            return <CheckEmail ref = {ref} />;
           default:
             return <LoginPage ref= {ref}/>;
         }
