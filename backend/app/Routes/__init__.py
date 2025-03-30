@@ -1,4 +1,4 @@
 from app.Routes.Authroutes import auth
 
 def register_bluepints(app):
-    app.register_blueprint(auth)
+    app.register_blueprint(auth, url_prefix='/auth')

@@ -9,6 +9,9 @@
 *.pako
 *.mako
 venv/
+*.env
+__pycache__/
+*.pyc
 
 
 ### react ###

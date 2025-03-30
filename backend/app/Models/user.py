@@ -118,12 +118,20 @@ class User(db.Model):
             return -1
         print("This is s_id " + str(s_id))
         a = self.follow_subreddit(s_id, True)
-        if(a is -1):
+        if(a == -1):
             return -1
         return s_id
 
     def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
+        try:
+            self.password_hash = generate_password_hash(password)
+            db.session.add(self)
+            db.session.commit()
+            return 1
+        except:
+            db.session.rollback()
+            return -1
+        
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)

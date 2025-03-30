@@ -2,6 +2,7 @@ import './../SignupLogin.css'
 import React, { forwardRef, useContext, useRef, useState } from 'react';
 import { StatusContext, Page } from './../PageContext';
 import axios from 'axios';
+import GoogleLoginButton from '../GoogleLoginButton';
 
 const LoginPage = forwardRef((props, ref) =>{
     let { status, setStatus } = useContext(StatusContext);
@@ -58,6 +59,7 @@ const LoginPage = forwardRef((props, ref) =>{
                     By continuing, you agree to our<a target="_blank" href="">User Agreement</a> and acknowledge that you understand the <a target="_blank" href="">Privacy Policy</a>.
                  </p>
             </div>
+            <GoogleLoginButton />
             <div className='emailPlaceholder'>
                     <span className='emailLabel'>
                         Email or username*

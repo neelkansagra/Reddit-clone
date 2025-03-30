@@ -117,7 +117,7 @@ const Continue = () =>{
                     {passwordState(passwordError)}
                 </div>
                 <div className='loginBtn'>
-                    <button className='orangeLogin' disabled={disabled? true : false} onClick={postHandler}>
+                    <button className='orangeLogin' disabled={disabled} onClick={postHandler}>
                         Sign Up
                     </button>
                 </div>

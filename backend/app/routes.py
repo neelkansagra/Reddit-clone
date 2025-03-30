@@ -207,29 +207,6 @@ def create_comment():
         resp["Response"] = "Bad Request"
         return jsonify(resp)
 
-def token_required(f):
-        @wraps(f)
-        def decorated(*args, **kwargs):
-            token = request.headers["Authorization"].split(" ")[1]
-            #print(token + " this is token")
-
-            if not token:
-                return jsonify({'message': 'Token is missing!'}), 401
-
-            try:
-                data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
-                current_user = User.query.filter_by(id = int(data['user_id'])).first()
-                if current_user is None:
-                    return jsonify({'message': "Invalid user"}), 401
-            except jwt.ExpiredSignatureError:
-                return jsonify({'message': 'Token has expired!'}), 401
-            except jwt.InvalidTokenError:
-                return jsonify({'message': 'Invalid token!'}), 401
-
-            return f(current_user, *args, **kwargs)
-
-        return decorated
-
 @app.route('/delete', methods=['DELETE'])
 def delete():
     if request.content_type != 'application/json':
@@ -256,20 +233,20 @@ def delete():
         resp["Response"] = "No such email"
         return jsonify(resp), 401
 
-@app.route('/feed', methods=['GET'])
-@token_required
-def get_feed(current_user):
+# @app.route('/feed', methods=['GET'])
+# @token_required
+# def get_feed(current_user):
     
-    feed = current_user.feedify()
+#     feed = current_user.feedify()
 
-    print(feed)
+#     print(feed)
 
-    resp = dict()
-    resp["Response"] = "Success"
-    resp["posts"] = feed
-    response = make_response(jsonify(resp))
-    #response.headers["Authorization"] = "Bearer "+ str(token)
-    return response, 200
+#     resp = dict()
+#     resp["Response"] = "Success"
+#     resp["posts"] = feed
+#     response = make_response(jsonify(resp))
+#     #response.headers["Authorization"] = "Bearer "+ str(token)
+#     return response, 200
 
 @app.route('/search', methods=['GET'])
 def search():

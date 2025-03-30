@@ -1,6 +1,7 @@
 import './../SignupLogin.css'
 import React, { forwardRef, useContext, useState, useRef } from 'react';
 import { StatusContext, Page, emailContext } from './../PageContext';
+import GoogleLoginButton from '../GoogleLoginButton';
 
 const Signup = forwardRef((props, ref) =>{
     let {setStatus } = useContext(StatusContext);
@@ -47,6 +48,7 @@ const Signup = forwardRef((props, ref) =>{
                     By continuing, you agree to our<a target="_blank" href="">User Agreement</a> and acknowledge that you understand the <a target="_blank" href="">Privacy Policy</a>.
                 </p>
             </div>
+            <GoogleLoginButton />
             <div className='emailPlaceholder'>
                 <span className='emailLabel'>
                     Email
