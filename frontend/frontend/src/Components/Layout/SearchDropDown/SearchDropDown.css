@@ -1,0 +1,47 @@
+.SearchDropDown{
+    width: inherit;
+    position: fixed;
+    z-index: -1;
+    max-height: calc(100vh - 56px - 25px);
+    top: 28px;
+    background-color: rgb(24, 28, 31);
+}
+.RecentSearchBox{
+    border-style: solid;
+    border-color: #FFFFFF33;
+    border-bottom-width: 0.0625rem;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    width: 100%;
+    margin-top: 28px;
+    
+}
+.RecentSearchUL{
+    padding: 0;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 0.5px;
+    border-color: #FFFFFF33;
+    margin: 0;
+
+}
+.TrendingTitle{
+    color: rgb(139, 162, 173);
+    display: flex;
+    align-items: center;
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+    margin-bottom: 0.25rem;
+
+}
+.trendingSearchBox{
+
+
+}
+.trendingSearchUL{
+    padding: 0;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}

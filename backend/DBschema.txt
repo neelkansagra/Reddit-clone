@@ -1,0 +1,122 @@
+Users:
+1) ID
+2) username
+3) email
+4) created_at 
+
+JWT format
+1) sub - user_id
+2) iat - issued_time
+3) ext - expirytime
+4) iss - issuer
+5) tar - who is the reciever
+6) username
+7) email - 
+8) role - [admin, user]
+
+For tracking sessions we will use refresh tokens
+Sessions
+1) id
+2) user_id
+3) token_hash
+4) user_agent - device from which user logged in
+5) login_type - (normal, google)
+5) ip_address 
+6) created_at
+7) expires_at
+8) is_revoked
+
+For login we use JWT and refresh tokens to authenticate users.
+1) User provides username and password to the server.
+   Or User provides google cred validation and frontend forwards this to backend.
+2) In the second case db creates a user if it doesn't exist(No password).
+3) The server validates username/password if valid issues a new JWT and new refresh token and sends to frontend.  
+
+auth providers
+1) ID
+2) user_id
+3) provider - (google, apple, facebook, ..etc)
+4) provider_user_id - (ID of user in provider)
+5) created_at - timestamp
+
+password_auth
+1) user_id 
+2) password_hash
+
+forgot_password_session
+1) id 
+2) random_token
+3) expiry time
+4) is_expired
+5) user_id
+
+-> cron service for deleting rows which are expired
+-> We can modify this table to use it for email verification
+
+Auth service endpoints
+1) /auth/signup - for signing up user with email and password
+2) /auth/login - for logging in user with email and password
+3) /auth/forgot-password - for initiating a forgot password email 
+4) /auth/change-password - for changing the password after forgot-password session
+5) /auth/refresh-token - for refreshing the refresh-token when JWT is expired.
+6) /auth/suggest-username - for sending username-suggestions
+7) /auth/username-exist - to find if the username exists or not.
+8) /auth/verify-email - to verify email.
+9) /auth/oauth/<provider> - for signingup from a identity provider(only google, may increase in future) 
+10) /auth/revoke-sessions - for revoking sessions of a user
+11) /auth/me - for retrieving users basic information.
+12) /auth/session-history - for retrieving session-history of a user
+13) /auth/delete-account - for deleting user acctount.
+14) /auth/update - for updating user info (email, username, ...etc)
+15) /auth/change-current-password - for changing current passwword
+16) /auth/logout - for logging out users.
+
+POST /auth/signup - email, password and username fields in POST request.
+1) Check if the request is within limits
+2) check if email, password and username is valid.
+3) check if email is verified
+3) check if either email or username exists.
+4) Store session info in db - (create at, IP, device,..etc)
+5) If not create the user and send JWT and refresh token in response.
+
+POST /auth/login - email and password as request parameters
+1) check rate limiting
+2) check email exists or not
+3) if exists then verify password
+4) If correct the send JWWT and refresh token.
+5) Store session info.
+(CAPTCHA nad login-abuse mechanisms)
+
+POST /auth/forgot-password - email in request parameters
+1) search if the email exists or not
+2) Search for an active "forgot-password" session, if exists then change the session token and update expiry time.
+   - If not then create a new session wwith - session id, random_token, expired_at, user_id, revoked parameters.
+3) send forgot-password link 
+4) store session in reset-password-sessions.
+
+POST /auth/change-password - 'session_id','token','password', 'verify_password' in request parameters.
+1) Search the session in forgot-password table
+2) If exists then check token, password and verify_password fields.
+3) If okay then change the password of user_id.
+4) Store a neww session as password changed.
+
+POST /auth/refresh-token - refresh-token as request parameter
+1) check if the refresh-token exists in the db.
+2) If yes then check if it's expired or not.
+3) If no then create a neww JWT and refresh token.
+4) Update the session table wwith new refresh token.
+5) Send JWT and refresh token.
+
+GET /auth/suggest-username/?count=5 
+1) Generates random usernames which are not used and sends "count" number of them.
+2) Use bloom filters to check if the username doesn't exist.
+
+GET /auth/username-exist?username=<val> - username as request parameter.
+1) Checks if the username exists or not using bloom filter. 
+2) Check DB if bloom filter fails.
+
+POST /auth/verify-email - email as request parameter.
+1) Check if the email is valid.
+
+POST /auth/oauth-signup/<provider> - token as request parameter
+1) Check 

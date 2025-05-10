@@ -1,0 +1,8 @@
+1) Landing Page - /
+   - Lands at /popular which should be uniform across all reddit. It should not be protected route.
+    - We need 1 endpoint for showing popular img posts. /api/popular/image?count=5
+    - /api/popular/subreddit?count=5 - for fetching popular subreddits.
+    - /api/popular/posts?page=1&count=5&sort=Hot&country=IN - for fetching popular posts.
+    - On the sides we have Topics tab which should render topics tab which should be cached not re-rendered everytime.
+     - /api/topics?count=5 - topics and subtopics.
+     - 

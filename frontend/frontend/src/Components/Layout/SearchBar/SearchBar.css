@@ -1,0 +1,121 @@
+.searchMain{
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: stretch;
+    flex: 1 1 0%;
+    height: 40px;
+
+}
+.searchSub{
+    display: flex;
+    justify-content: stretch;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    pointer-events: auto;
+    height: 40px;
+    z-index: 0;
+
+}
+.searchBar{
+    background-color: rgb(24, 28, 31);
+    border-radius: 1.25rem;
+    width: inherit;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-width: 0px;
+    height: 40px;
+}
+.searchBarBg{
+    background-color: #2A3236;
+    border-radius: 1.25rem;
+    width: inherit;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+.searchSubSub{
+    display: block;
+    
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: auto;
+
+}
+.searchForm{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 0em;
+    color: #EEF1F3;
+}
+.searchLabel{
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    cursor: default;
+    font-family: 'Segoe UI','Helvetica Neue',Arial,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
+}
+.searchBoxPadding{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0%;
+}
+
+.searchIcon{
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+.inputContainer{
+    display: flex;
+    align-items: center;
+    font: normal 400 0.875rem/1.25rem;
+    position: relative;
+    transform: translateY(0px);
+    transition: transform 150ms ease 0s;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+::placeholder{
+    color: #EEF1F3;
+}
+input{
+    background: 0px 0px;
+    border: none;
+    outline: 0px;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding-block: 1px;
+    padding-inline: 2px;
+    color: white;
+}
+.showClearIcon{
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    border-radius: 100px;
+}
+.showClearIcon:hover{
+    cursor: pointer;
+    background-color: rgb(51,61,66);
+}
+.hideClearIcon{
+    display: none;
+}
