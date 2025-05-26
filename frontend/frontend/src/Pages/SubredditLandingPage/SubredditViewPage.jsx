@@ -1,0 +1,1 @@
+// Route for /r/<sub-name>/[top,new,best,rising,hot]?t=[now,day, week,month, year,all]

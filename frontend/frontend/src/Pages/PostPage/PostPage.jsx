@@ -1,0 +1,1 @@
+// Roue for /r/<sub-name>/comments/<post-id>/post-title>?sort=[old,top,new,best,controversial]&&?q=<search-query>

@@ -1,0 +1,1 @@
+// Route for /best/communities/<page_no></page_no>
